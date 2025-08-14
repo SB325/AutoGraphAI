@@ -36,3 +36,14 @@ neo4j_aura = Graph(store=Neo4jStore(config=config))
 # Calling the parse method will implictly open the store
 neo4j_aura.parse(file_path, format="ttl")
 neo4j_aura.close(True)
+
+# from neo4j_graphrag.generation import GraphRAG
+# from langchain_community.chat_models import ChatOllama
+
+# # retriever = ...
+
+# llm = ChatOllama(model="llama3:8b")
+# rag = GraphRAG(retriever=retriever, llm=llm)
+# query_text = "How do I do similarity search in Neo4j?"
+# response = rag.search(query_text=query_text, retriever_config={"top_k": 5})
+# print(response.answer)
