@@ -16,5 +16,5 @@ async def chunk_reaader():
     )
     reader = Neo4jChunkReader(driver)
     result = await reader.run(lexical_graph_config=config)
-
+    pdb.set_trace()
     return result
