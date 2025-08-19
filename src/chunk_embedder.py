@@ -11,7 +11,8 @@ model_name = os.getenv("EMBEDDING_MODEL_NAME")
 
 class embedder():
     def __init__(self):
-        self.embedder = TextChunkEmbedder(embedder=OllamaEmbeddings(
+        self.embedder = TextChunkEmbedder(
+                    embedder=OllamaEmbeddings(
                     model = model_name,
                     ))
 
