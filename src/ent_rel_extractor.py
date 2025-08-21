@@ -27,7 +27,6 @@ class entityRelationshipExtractor():
         )
 
     async def extract_facts(self, chunk_block):
-        pdb.set_trace()
         return await self.extractor.run(chunks=TextChunks(chunks=chunk_block))
     
     async def show_entities_relationships(self):

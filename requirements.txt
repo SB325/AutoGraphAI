@@ -4,3 +4,4 @@ python-dotenv
 neo4j-graphrag
 langchain-community
 langchain-ollama
+pydantic
