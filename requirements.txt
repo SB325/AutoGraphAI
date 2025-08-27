@@ -5,3 +5,4 @@ neo4j-graphrag
 langchain-community
 langchain-ollama
 pydantic
+json-repair

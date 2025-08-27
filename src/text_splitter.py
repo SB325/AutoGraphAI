@@ -4,7 +4,7 @@ import asyncio
 import pdb
 import ast
 
-async def text_splitter(input_text: str, chunk_size: int = 200, chunk_overlap: int = 100):
+async def text_splitter(input_text: str, chunk_size: int = 200, chunk_overlap: int = 0):
     ## Splits Document into chunks of size <chunk_size> or smaller with <chunk_overlap>
     #  character overlaps between consecutive chunks. Yields an object <splits> that contains
     #  text, index (of chunk), metadata and uid for each chunk. A dictionary can be obtained 
