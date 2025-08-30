@@ -1,0 +1,1 @@
+# This script relabels verbose relationship labels into shorter more canonical forms

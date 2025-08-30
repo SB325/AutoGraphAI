@@ -96,7 +96,9 @@ class auto_schema_builder():
                 model_params={
                     "max_tokens": 2000,
                     "response_format": {"type": "json_object"},
+                    "options": {"host": 'http://172.18.0.11:11434'},
                 },
+
             ),
             prompt_template=PromptTemplate(
                 template=triplet_extraction_prompt,
@@ -107,10 +109,24 @@ class auto_schema_builder():
     async def extract(self, chunk_block: str):
         # Extract the schema from the text
         # pdb.set_trace()
-        return await self.schema_extractor.run(
+        graph_schema =  self.schema_extractor.run(
                     text=chunk_block[0].text) #TextChunks(chunks=chunk_block))
                     # examples=example)
 
+        return graph_schema
+        # success = False
+        # if not (graph_schema.node_types & graph_schema.relationship_types & graph_schema.patterns):
+        #     return success, graph_schema
+        # else:
+        #     success = True
+        #     return success, graph_schema
+
+    def save_schema(self, graph_schema, filename):
+        try:
+            extracted_schema.save(f"{filename}.json")
+        except BaseExceptionn as be:
+            print(f"Error in save_schema: {be}")
+            
 if __name__ == "__main__":
 
     # Load Data
