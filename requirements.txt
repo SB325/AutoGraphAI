@@ -1,8 +1,5 @@
 rdflib-neo4j
 python-dotenv
-
 neo4j-graphrag
-langchain-community
-langchain-ollama
 pydantic
 json-repair
