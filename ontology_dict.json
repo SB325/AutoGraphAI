@@ -1,0 +1,3907 @@
+{
+    "https://www.gleif.org/ontology/Base": {
+        "is_a": "[owl.Ontology, voaf.Vocabulary]",
+        "storid": 303,
+        "name": "Base",
+        "full_name": "ontology.Base",
+        "iri": "https://www.gleif.org/ontology/Base",
+        "object": [
+            {
+                "is_a": "[owl.Ontology]",
+                "storid": 306,
+                "name": "CountryRepresentation",
+                "full_name": "Countries.CountryRepresentation",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation"
+            },
+            {
+                "is_a": "[ontology.xml.RegistrationAuthority]",
+                "storid": 312,
+                "name": "GLEIF",
+                "full_name": "ontology.xml.GLEIF",
+                "iri": "https://www.gleif.org/ontology/Base/GLEIF"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 12,
+                "name": "NamedIndividual",
+                "full_name": "owl.NamedIndividual",
+                "iri": "http://www.w3.org/2002/07/owl#NamedIndividual"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 393,
+                "name": "Vocabulary",
+                "full_name": "voaf.Vocabulary",
+                "iri": "http://purl.org/vocommons/voaf#Vocabulary"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 313,
+                "name": "rightsHolder",
+                "full_name": "terms.rightsHolder",
+                "iri": "http://purl.org/dc/terms/rightsHolder"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 314,
+                "name": "preferredNamespacePrefix",
+                "full_name": "vann.preferredNamespacePrefix",
+                "iri": "http://purl.org/vocab/vann/preferredNamespacePrefix"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 315,
+                "name": "preferredNamespaceUri",
+                "full_name": "vann.preferredNamespaceUri",
+                "iri": "http://purl.org/vocab/vann/preferredNamespaceUri"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "http://purl.org/dc/terms/rightsHolder": {
+        "is_a": "[owl.AnnotationProperty]",
+        "storid": 313,
+        "name": "rightsHolder",
+        "full_name": "terms.rightsHolder",
+        "iri": "http://purl.org/dc/terms/rightsHolder"
+    },
+    "http://purl.org/vocab/vann/preferredNamespacePrefix": {
+        "is_a": "[owl.AnnotationProperty]",
+        "storid": 314,
+        "name": "preferredNamespacePrefix",
+        "full_name": "vann.preferredNamespacePrefix",
+        "iri": "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "http://purl.org/vocab/vann/preferredNamespaceUri": {
+        "is_a": "[owl.AnnotationProperty]",
+        "storid": 315,
+        "name": "preferredNamespaceUri",
+        "full_name": "vann.preferredNamespaceUri",
+        "iri": "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "https://www.gleif.org/ontology/Base/hasAbbreviation": {
+        "is_a": "[owl.DatatypeProperty, core.altLabel]",
+        "storid": 316,
+        "name": "hasAbbreviation",
+        "full_name": "ontology.xml.hasAbbreviation",
+        "iri": "https://www.gleif.org/ontology/Base/hasAbbreviation",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 14,
+                "name": "DatatypeProperty",
+                "full_name": "owl.DatatypeProperty",
+                "iri": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasLegalName": {
+        "is_a": "[owl.AnnotationProperty]",
+        "storid": 318,
+        "name": "hasLegalName",
+        "full_name": "ontology.xml.hasLegalName",
+        "iri": "https://www.gleif.org/ontology/Base/hasLegalName"
+    },
+    "https://www.gleif.org/ontology/Base/hasName": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 319,
+        "name": "hasName",
+        "full_name": "ontology.xml.hasName",
+        "iri": "https://www.gleif.org/ontology/Base/hasName",
+        "object": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 14,
+                "name": "DatatypeProperty",
+                "full_name": "owl.DatatypeProperty",
+                "iri": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameAdditional": {
+        "is_a": "[ontology.xml.hasName]",
+        "storid": 320,
+        "name": "hasNameAdditional",
+        "full_name": "ontology.xml.hasNameAdditional",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameAdditional",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 14,
+                "name": "DatatypeProperty",
+                "full_name": "owl.DatatypeProperty",
+                "iri": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 319,
+                "name": "hasName",
+                "full_name": "ontology.xml.hasName",
+                "iri": "https://www.gleif.org/ontology/Base/hasName"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameLegalLocal": {
+        "is_a": "[ontology.xml.hasNameLegal, ontology.xml.hasNameLocal]",
+        "storid": 321,
+        "name": "hasNameLegalLocal",
+        "full_name": "ontology.xml.hasNameLegalLocal",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameLegalLocal",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            },
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 14,
+                "name": "DatatypeProperty",
+                "full_name": "owl.DatatypeProperty",
+                "iri": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            },
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 377,
+                "name": "hasNameLegal",
+                "full_name": "ontology.xml.hasNameLegal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLegal"
+            },
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 380,
+                "name": "hasNameLocal",
+                "full_name": "ontology.xml.hasNameLocal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLocal"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameTransliterated": {
+        "is_a": "[ontology.xml.hasName]",
+        "storid": 323,
+        "name": "hasNameTransliterated",
+        "full_name": "ontology.xml.hasNameTransliterated",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameTransliterated",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 14,
+                "name": "DatatypeProperty",
+                "full_name": "owl.DatatypeProperty",
+                "iri": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 319,
+                "name": "hasName",
+                "full_name": "ontology.xml.hasName",
+                "iri": "https://www.gleif.org/ontology/Base/hasName"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddress": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 324,
+        "name": "hasAddress",
+        "full_name": "ontology.xml.hasAddress",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddress",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressHeadquarters": {
+        "is_a": "[ontology.xml.hasAddress]",
+        "storid": 327,
+        "name": "hasAddressHeadquarters",
+        "full_name": "ontology.xml.hasAddressHeadquarters",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressHeadquarters",
+        "object": [
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 324,
+                "name": "hasAddress",
+                "full_name": "ontology.xml.hasAddress",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressLegal": {
+        "is_a": "[ontology.xml.hasAddress]",
+        "storid": 328,
+        "name": "hasAddressLegal",
+        "full_name": "ontology.xml.hasAddressLegal",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressLegal",
+        "object": [
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 324,
+                "name": "hasAddress",
+                "full_name": "ontology.xml.hasAddress",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressTransliterated": {
+        "is_a": "[ontology.xml.hasAddress]",
+        "storid": 329,
+        "name": "hasAddressTransliterated",
+        "full_name": "ontology.xml.hasAddressTransliterated",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressTransliterated",
+        "object": [
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 324,
+                "name": "hasAddress",
+                "full_name": "ontology.xml.hasAddress",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddress"
+            },
+            {
+                "is_a": "[ontology.xml.PhysicalAddress]",
+                "storid": 330,
+                "name": "PhysicalAddressASCII",
+                "full_name": "ontology.xml.PhysicalAddressASCII",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddressASCII"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasCountry": {
+        "is_a": "[ontology.xml.hasGeographicRegion]",
+        "storid": 331,
+        "name": "hasCountry",
+        "full_name": "ontology.xml.hasCountry",
+        "iri": "https://www.gleif.org/ontology/Base/hasCountry",
+        "object": [
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 332,
+                "name": "hasGeographicRegion",
+                "full_name": "ontology.xml.hasGeographicRegion",
+                "iri": "https://www.gleif.org/ontology/Base/hasGeographicRegion"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[CountryRepresentation.GeopoliticalEntity, CountryRepresentation.hasEnglishShortName.exactly(1, owl.Thing), CountryRepresentation.hasFrenchShortNameInCapitals.exactly(1, owl.Thing), CountryRepresentation.hasEnglishShortNameInCapitals.exactly(1, owl.Thing), CountryRepresentation.hasFrenchShortName.exactly(1, owl.Thing), CountryRepresentation.hasEnglishFullName.max(1, owl.Thing), CountryRepresentation.hasFrenchFullName.max(1, owl.Thing), CountryRepresentation.usesAdministrativeLanguage.only(LanguageRepresentation.Language), CountryRepresentation.isIndependent.exactly(1, <class 'bool'>)]",
+                "storid": 333,
+                "name": "Country",
+                "full_name": "CountryRepresentation.Country",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasCoverageArea": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 334,
+        "name": "hasCoverageArea",
+        "full_name": "ontology.xml.hasCoverageArea",
+        "iri": "https://www.gleif.org/ontology/Base/hasCoverageArea",
+        "object": [
+            {
+                "is_a": "[CountryRepresentation.Location]",
+                "storid": 335,
+                "name": "GeographicRegion",
+                "full_name": "CountryRepresentation.GeographicRegion",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasEntityExpirationReason": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 336,
+        "name": "hasEntityExpirationReason",
+        "full_name": "ontology.xml.hasEntityExpirationReason",
+        "iri": "https://www.gleif.org/ontology/Base/hasEntityExpirationReason",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 337,
+                "name": "EntityExpirationReason",
+                "full_name": "ontology.xml.EntityExpirationReason",
+                "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReason"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasEntityStatus": {
+        "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+        "storid": 338,
+        "name": "hasEntityStatus",
+        "full_name": "ontology.xml.hasEntityStatus",
+        "iri": "https://www.gleif.org/ontology/Base/hasEntityStatus",
+        "object": [
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 339,
+                "name": "EntityStatus",
+                "full_name": "ontology.xml.EntityStatus",
+                "iri": "https://www.gleif.org/ontology/Base/EntityStatus"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasGeographicRegion": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 332,
+        "name": "hasGeographicRegion",
+        "full_name": "ontology.xml.hasGeographicRegion",
+        "iri": "https://www.gleif.org/ontology/Base/hasGeographicRegion",
+        "object": [
+            {
+                "is_a": "[CountryRepresentation.Location]",
+                "storid": 335,
+                "name": "GeographicRegion",
+                "full_name": "CountryRepresentation.GeographicRegion",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasLegalJurisdiction": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 340,
+        "name": "hasLegalJurisdiction",
+        "full_name": "ontology.xml.hasLegalJurisdiction",
+        "iri": "https://www.gleif.org/ontology/Base/hasLegalJurisdiction",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[CountryRepresentation.Location]",
+                "storid": 335,
+                "name": "GeographicRegion",
+                "full_name": "CountryRepresentation.GeographicRegion",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasRegion": {
+        "is_a": "[ontology.xml.hasGeographicRegion]",
+        "storid": 341,
+        "name": "hasRegion",
+        "full_name": "ontology.xml.hasRegion",
+        "iri": "https://www.gleif.org/ontology/Base/hasRegion",
+        "object": [
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 332,
+                "name": "hasGeographicRegion",
+                "full_name": "ontology.xml.hasGeographicRegion",
+                "iri": "https://www.gleif.org/ontology/Base/hasGeographicRegion"
+            },
+            {
+                "is_a": "[CountryRepresentation.GeopoliticalEntity, CountryRepresentation.isClassifiedBy.some(CountryRepresentation.GeographicRegionKind)]",
+                "storid": 342,
+                "name": "CountrySubdivision",
+                "full_name": "CountryRepresentation.CountrySubdivision",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/CountrySubdivision"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasRegistrationStatus": {
+        "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+        "storid": 343,
+        "name": "hasRegistrationStatus",
+        "full_name": "ontology.xml.hasRegistrationStatus",
+        "iri": "https://www.gleif.org/ontology/Base/hasRegistrationStatus",
+        "object": [
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 344,
+                "name": "RegistrationStatus",
+                "full_name": "ontology.xml.RegistrationStatus",
+                "iri": "https://www.gleif.org/ontology/Base/RegistrationStatus"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasSource": {
+        "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+        "storid": 345,
+        "name": "hasSource",
+        "full_name": "ontology.xml.hasSource",
+        "iri": "https://www.gleif.org/ontology/Base/hasSource",
+        "object": [
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasSource.exactly(1, ontology.xml.Entity), ontology.xml.hasTarget.exactly(1, ontology.xml.Entity)]",
+                "storid": 346,
+                "name": "LegalEntityRelationship",
+                "full_name": "ontology.xml.LegalEntityRelationship",
+                "iri": "https://www.gleif.org/ontology/Base/LegalEntityRelationship"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasSuccessor": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 347,
+        "name": "hasSuccessor",
+        "full_name": "ontology.xml.hasSuccessor",
+        "iri": "https://www.gleif.org/ontology/Base/hasSuccessor",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasTarget": {
+        "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+        "storid": 348,
+        "name": "hasTarget",
+        "full_name": "ontology.xml.hasTarget",
+        "iri": "https://www.gleif.org/ontology/Base/hasTarget",
+        "object": [
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasSource.exactly(1, ontology.xml.Entity), ontology.xml.hasTarget.exactly(1, ontology.xml.Entity)]",
+                "storid": 346,
+                "name": "LegalEntityRelationship",
+                "full_name": "ontology.xml.LegalEntityRelationship",
+                "iri": "https://www.gleif.org/ontology/Base/LegalEntityRelationship"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/identifies": {
+        "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+        "storid": 349,
+        "name": "identifies",
+        "full_name": "ontology.xml.identifies",
+        "iri": "https://www.gleif.org/ontology/Base/identifies",
+        "object": [
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/isManagedBy": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 350,
+        "name": "isManagedBy",
+        "full_name": "ontology.xml.isManagedBy",
+        "iri": "https://www.gleif.org/ontology/Base/isManagedBy",
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ],
+        "object": [
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/isQualifiedBy": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 351,
+        "name": "isQualifiedBy",
+        "full_name": "ontology.xml.isQualifiedBy",
+        "iri": "https://www.gleif.org/ontology/Base/isQualifiedBy",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasSource.exactly(1, ontology.xml.Entity), ontology.xml.hasTarget.exactly(1, ontology.xml.Entity)]",
+                "storid": 346,
+                "name": "LegalEntityRelationship",
+                "full_name": "ontology.xml.LegalEntityRelationship",
+                "iri": "https://www.gleif.org/ontology/Base/LegalEntityRelationship"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/isRegisteredIn": {
+        "is_a": "[owl.ObjectProperty]",
+        "storid": 352,
+        "name": "isRegisteredIn",
+        "full_name": "ontology.xml.isRegisteredIn",
+        "iri": "https://www.gleif.org/ontology/Base/isRegisteredIn",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.isManagedBy.exactly(1, ontology.xml.Entity)]",
+                "storid": 353,
+                "name": "Registry",
+                "full_name": "ontology.xml.Registry",
+                "iri": "https://www.gleif.org/ontology/Base/Registry"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/records": {
+        "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+        "storid": 354,
+        "name": "records",
+        "full_name": "ontology.xml.records",
+        "iri": "https://www.gleif.org/ontology/Base/records",
+        "object": [
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 355,
+                "name": "RegistryEntry",
+                "full_name": "ontology.xml.RegistryEntry",
+                "iri": "https://www.gleif.org/ontology/Base/RegistryEntry"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "http://purl.org/dc/terms/created": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 356,
+        "name": "created",
+        "full_name": "terms.created",
+        "iri": "http://purl.org/dc/terms/created"
+    },
+    "http://purl.org/dc/terms/modified": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 357,
+        "name": "modified",
+        "full_name": "terms.modified",
+        "iri": "http://purl.org/dc/terms/modified"
+    },
+    "https://www.gleif.org/ontology/Base/hasAbbreviationLocal": {
+        "is_a": "[ontology.xml.hasAbbreviation]",
+        "storid": 358,
+        "name": "hasAbbreviationLocal",
+        "full_name": "ontology.xml.hasAbbreviationLocal",
+        "iri": "https://www.gleif.org/ontology/Base/hasAbbreviationLocal",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty, core.altLabel]",
+                "storid": 316,
+                "name": "hasAbbreviation",
+                "full_name": "ontology.xml.hasAbbreviation",
+                "iri": "https://www.gleif.org/ontology/Base/hasAbbreviation"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAbbreviationTransliterated": {
+        "is_a": "[ontology.xml.hasAbbreviation]",
+        "storid": 359,
+        "name": "hasAbbreviationTransliterated",
+        "full_name": "ontology.xml.hasAbbreviationTransliterated",
+        "iri": "https://www.gleif.org/ontology/Base/hasAbbreviationTransliterated",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty, core.altLabel]",
+                "storid": 316,
+                "name": "hasAbbreviation",
+                "full_name": "ontology.xml.hasAbbreviation",
+                "iri": "https://www.gleif.org/ontology/Base/hasAbbreviation"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAdditionalAddressLine": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 360,
+        "name": "hasAdditionalAddressLine",
+        "full_name": "ontology.xml.hasAdditionalAddressLine",
+        "iri": "https://www.gleif.org/ontology/Base/hasAdditionalAddressLine",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressLine1": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 361,
+        "name": "hasAddressLine1",
+        "full_name": "ontology.xml.hasAddressLine1",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressLine1",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 362,
+                "name": "hasFirstAddressLine",
+                "full_name": "ontology.xml.hasFirstAddressLine",
+                "iri": "https://www.gleif.org/ontology/Base/hasFirstAddressLine"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressLine2": {
+        "is_a": "[ontology.xml.hasAdditionalAddressLine]",
+        "storid": 363,
+        "name": "hasAddressLine2",
+        "full_name": "ontology.xml.hasAddressLine2",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressLine2",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 360,
+                "name": "hasAdditionalAddressLine",
+                "full_name": "ontology.xml.hasAdditionalAddressLine",
+                "iri": "https://www.gleif.org/ontology/Base/hasAdditionalAddressLine"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressLine3": {
+        "is_a": "[ontology.xml.hasAdditionalAddressLine]",
+        "storid": 364,
+        "name": "hasAddressLine3",
+        "full_name": "ontology.xml.hasAddressLine3",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressLine3",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 360,
+                "name": "hasAdditionalAddressLine",
+                "full_name": "ontology.xml.hasAdditionalAddressLine",
+                "iri": "https://www.gleif.org/ontology/Base/hasAdditionalAddressLine"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressLine4": {
+        "is_a": "[ontology.xml.hasAdditionalAddressLine]",
+        "storid": 365,
+        "name": "hasAddressLine4",
+        "full_name": "ontology.xml.hasAddressLine4",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressLine4",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 360,
+                "name": "hasAdditionalAddressLine",
+                "full_name": "ontology.xml.hasAdditionalAddressLine",
+                "iri": "https://www.gleif.org/ontology/Base/hasAdditionalAddressLine"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressNumber": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 366,
+        "name": "hasAddressNumber",
+        "full_name": "ontology.xml.hasAddressNumber",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressNumber",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasAddressNumberWithinBuilding": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 367,
+        "name": "hasAddressNumberWithinBuilding",
+        "full_name": "ontology.xml.hasAddressNumberWithinBuilding",
+        "iri": "https://www.gleif.org/ontology/Base/hasAddressNumberWithinBuilding",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasCity": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 368,
+        "name": "hasCity",
+        "full_name": "ontology.xml.hasCity",
+        "iri": "https://www.gleif.org/ontology/Base/hasCity",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasEnd": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 369,
+        "name": "hasEnd",
+        "full_name": "ontology.xml.hasEnd",
+        "iri": "https://www.gleif.org/ontology/Base/hasEnd",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasStart.exactly(1, <class 'datetime.datetime'>), ontology.xml.hasEnd.max(1, <class 'datetime.datetime'>)]",
+                "storid": 370,
+                "name": "Period",
+                "full_name": "ontology.xml.Period",
+                "iri": "https://www.gleif.org/ontology/Base/Period"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasEntityExpirationDate": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 371,
+        "name": "hasEntityExpirationDate",
+        "full_name": "ontology.xml.hasEntityExpirationDate",
+        "iri": "https://www.gleif.org/ontology/Base/hasEntityExpirationDate",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasFirstAddressLine": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 362,
+        "name": "hasFirstAddressLine",
+        "full_name": "ontology.xml.hasFirstAddressLine",
+        "iri": "https://www.gleif.org/ontology/Base/hasFirstAddressLine",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasInitialRegistrationDate": {
+        "is_a": "[terms.created]",
+        "storid": 372,
+        "name": "hasInitialRegistrationDate",
+        "full_name": "ontology.xml.hasInitialRegistrationDate",
+        "iri": "https://www.gleif.org/ontology/Base/hasInitialRegistrationDate",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 356,
+                "name": "created",
+                "full_name": "terms.created",
+                "iri": "http://purl.org/dc/terms/created"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasLastUpdateDate": {
+        "is_a": "[terms.modified]",
+        "storid": 373,
+        "name": "hasLastUpdateDate",
+        "full_name": "ontology.xml.hasLastUpdateDate",
+        "iri": "https://www.gleif.org/ontology/Base/hasLastUpdateDate",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 357,
+                "name": "modified",
+                "full_name": "terms.modified",
+                "iri": "http://purl.org/dc/terms/modified"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasMailRouting": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 374,
+        "name": "hasMailRouting",
+        "full_name": "ontology.xml.hasMailRouting",
+        "iri": "https://www.gleif.org/ontology/Base/hasMailRouting",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameASCII": {
+        "is_a": "[ontology.xml.hasNameTransliterated]",
+        "storid": 375,
+        "name": "hasNameASCII",
+        "full_name": "ontology.xml.hasNameASCII",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameASCII",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 323,
+                "name": "hasNameTransliterated",
+                "full_name": "ontology.xml.hasNameTransliterated",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameTransliterated"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameASCIIAutomatic": {
+        "is_a": "[ontology.xml.hasNameASCII, ontology.xml.hasNameLegal]",
+        "storid": 376,
+        "name": "hasNameASCIIAutomatic",
+        "full_name": "ontology.xml.hasNameASCIIAutomatic",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameASCIIAutomatic",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasNameTransliterated]",
+                "storid": 375,
+                "name": "hasNameASCII",
+                "full_name": "ontology.xml.hasNameASCII",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameASCII"
+            },
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 377,
+                "name": "hasNameLegal",
+                "full_name": "ontology.xml.hasNameLegal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLegal"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameASCIIPreferred": {
+        "is_a": "[ontology.xml.hasNameASCII, ontology.xml.hasNameLegal]",
+        "storid": 378,
+        "name": "hasNameASCIIPreferred",
+        "full_name": "ontology.xml.hasNameASCIIPreferred",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameASCIIPreferred",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasNameTransliterated]",
+                "storid": 375,
+                "name": "hasNameASCII",
+                "full_name": "ontology.xml.hasNameASCII",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameASCII"
+            },
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 377,
+                "name": "hasNameLegal",
+                "full_name": "ontology.xml.hasNameLegal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLegal"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameAdditionalLocal": {
+        "is_a": "[ontology.xml.hasNameAdditional, ontology.xml.hasNameLocal]",
+        "storid": 379,
+        "name": "hasNameAdditionalLocal",
+        "full_name": "ontology.xml.hasNameAdditionalLocal",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameAdditionalLocal",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 320,
+                "name": "hasNameAdditional",
+                "full_name": "ontology.xml.hasNameAdditional",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameAdditional"
+            },
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 380,
+                "name": "hasNameLocal",
+                "full_name": "ontology.xml.hasNameLocal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLocal"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameLegal": {
+        "is_a": "[ontology.xml.hasName]",
+        "storid": 377,
+        "name": "hasNameLegal",
+        "full_name": "ontology.xml.hasNameLegal",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameLegal",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 319,
+                "name": "hasName",
+                "full_name": "ontology.xml.hasName",
+                "iri": "https://www.gleif.org/ontology/Base/hasName"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameLocal": {
+        "is_a": "[ontology.xml.hasName]",
+        "storid": 380,
+        "name": "hasNameLocal",
+        "full_name": "ontology.xml.hasNameLocal",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameLocal",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 319,
+                "name": "hasName",
+                "full_name": "ontology.xml.hasName",
+                "iri": "https://www.gleif.org/ontology/Base/hasName"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNamePreviousLegal": {
+        "is_a": "[ontology.xml.hasNameAdditional]",
+        "storid": 381,
+        "name": "hasNamePreviousLegal",
+        "full_name": "ontology.xml.hasNamePreviousLegal",
+        "iri": "https://www.gleif.org/ontology/Base/hasNamePreviousLegal",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 320,
+                "name": "hasNameAdditional",
+                "full_name": "ontology.xml.hasNameAdditional",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameAdditional"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameTradingOrOperating": {
+        "is_a": "[ontology.xml.hasNameAdditional]",
+        "storid": 383,
+        "name": "hasNameTradingOrOperating",
+        "full_name": "ontology.xml.hasNameTradingOrOperating",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameTradingOrOperating",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasName]",
+                "storid": 320,
+                "name": "hasNameAdditional",
+                "full_name": "ontology.xml.hasNameAdditional",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameAdditional"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNameTranslatedEnglish": {
+        "is_a": "[ontology.xml.hasNameASCII]",
+        "storid": 384,
+        "name": "hasNameTranslatedEnglish",
+        "full_name": "ontology.xml.hasNameTranslatedEnglish",
+        "iri": "https://www.gleif.org/ontology/Base/hasNameTranslatedEnglish",
+        "object": [
+            {
+                "is_a": "[ontology.xml.hasNameTransliterated]",
+                "storid": 375,
+                "name": "hasNameASCII",
+                "full_name": "ontology.xml.hasNameASCII",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameASCII"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasNextRenewalDate": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 385,
+        "name": "hasNextRenewalDate",
+        "full_name": "ontology.xml.hasNextRenewalDate",
+        "iri": "https://www.gleif.org/ontology/Base/hasNextRenewalDate",
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ],
+        "object": [
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasPostalCode": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 386,
+        "name": "hasPostalCode",
+        "full_name": "ontology.xml.hasPostalCode",
+        "iri": "https://www.gleif.org/ontology/Base/hasPostalCode",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasStart": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 387,
+        "name": "hasStart",
+        "full_name": "ontology.xml.hasStart",
+        "iri": "https://www.gleif.org/ontology/Base/hasStart",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasStart.exactly(1, <class 'datetime.datetime'>), ontology.xml.hasEnd.max(1, <class 'datetime.datetime'>)]",
+                "storid": 370,
+                "name": "Period",
+                "full_name": "ontology.xml.Period",
+                "iri": "https://www.gleif.org/ontology/Base/Period"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasSuccessorName": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 388,
+        "name": "hasSuccessorName",
+        "full_name": "ontology.xml.hasSuccessorName",
+        "iri": "https://www.gleif.org/ontology/Base/hasSuccessorName",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasTag": {
+        "is_a": "[owl.FunctionalProperty, core.notation]",
+        "storid": 389,
+        "name": "hasTag",
+        "full_name": "ontology.xml.hasTag",
+        "iri": "https://www.gleif.org/ontology/Base/hasTag",
+        "object": [
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 390,
+                "name": "notation",
+                "full_name": "core.notation",
+                "iri": "http://www.w3.org/2004/02/skos/core#notation"
+            },
+            {
+                "is_a": "[22-rdf-syntax-ns.Property]",
+                "storid": 41,
+                "name": "FunctionalProperty",
+                "full_name": "owl.FunctionalProperty",
+                "iri": "http://www.w3.org/2002/07/owl#FunctionalProperty"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/hasWebsite": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 391,
+        "name": "hasWebsite",
+        "full_name": "ontology.xml.hasWebsite",
+        "iri": "https://www.gleif.org/ontology/Base/hasWebsite",
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ],
+        "object": [
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/isQuantifiedBy": {
+        "is_a": "[owl.DatatypeProperty]",
+        "storid": 392,
+        "name": "isQuantifiedBy",
+        "full_name": "ontology.xml.isQuantifiedBy",
+        "iri": "https://www.gleif.org/ontology/Base/isQuantifiedBy",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasSource.exactly(1, ontology.xml.Entity), ontology.xml.hasTarget.exactly(1, ontology.xml.Entity)]",
+                "storid": 346,
+                "name": "LegalEntityRelationship",
+                "full_name": "ontology.xml.LegalEntityRelationship",
+                "iri": "https://www.gleif.org/ontology/Base/LegalEntityRelationship"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "http://purl.org/vocommons/voaf#Vocabulary": {
+        "is_a": "[owl.Thing]",
+        "storid": 393,
+        "name": "Vocabulary",
+        "full_name": "voaf.Vocabulary",
+        "iri": "http://purl.org/vocommons/voaf#Vocabulary"
+    },
+    "https://www.gleif.org/ontology/Base/Entity": {
+        "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+        "storid": 325,
+        "name": "Entity",
+        "full_name": "ontology.xml.Entity",
+        "iri": "https://www.gleif.org/ontology/Base/Entity",
+        "object": [
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -1,
+                "name": "",
+                "full_name": "_:1",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -2,
+                "name": "",
+                "full_name": "_:2",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -3,
+                "name": "",
+                "full_name": "_:3",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -4,
+                "name": "",
+                "full_name": "_:4",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -5,
+                "name": "",
+                "full_name": "_:5",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -6,
+                "name": "",
+                "full_name": "_:6",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "": {
+        "is_a": "[owl.Restriction]",
+        "storid": -1,
+        "name": "",
+        "full_name": "_:1",
+        "iri": "",
+        "object": [
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 340,
+                "name": "hasLegalJurisdiction",
+                "full_name": "ontology.xml.hasLegalJurisdiction",
+                "iri": "https://www.gleif.org/ontology/Base/hasLegalJurisdiction"
+            },
+            {
+                "is_a": "[CountryRepresentation.Location]",
+                "storid": 335,
+                "name": "GeographicRegion",
+                "full_name": "CountryRepresentation.GeographicRegion",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/GeographicRegion"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 17,
+                "name": "Restriction",
+                "full_name": "owl.Restriction",
+                "iri": "http://www.w3.org/2002/07/owl#Restriction"
+            },
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 347,
+                "name": "hasSuccessor",
+                "full_name": "ontology.xml.hasSuccessor",
+                "iri": "https://www.gleif.org/ontology/Base/hasSuccessor"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+                "storid": 338,
+                "name": "hasEntityStatus",
+                "full_name": "ontology.xml.hasEntityStatus",
+                "iri": "https://www.gleif.org/ontology/Base/hasEntityStatus"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 339,
+                "name": "EntityStatus",
+                "full_name": "ontology.xml.EntityStatus",
+                "iri": "https://www.gleif.org/ontology/Base/EntityStatus"
+            },
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 336,
+                "name": "hasEntityExpirationReason",
+                "full_name": "ontology.xml.hasEntityExpirationReason",
+                "iri": "https://www.gleif.org/ontology/Base/hasEntityExpirationReason"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 337,
+                "name": "EntityExpirationReason",
+                "full_name": "ontology.xml.EntityExpirationReason",
+                "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReason"
+            },
+            {
+                "is_a": "[ontology.xml.hasNameLegal, ontology.xml.hasNameLocal]",
+                "storid": 321,
+                "name": "hasNameLegalLocal",
+                "full_name": "ontology.xml.hasNameLegalLocal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLegalLocal"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 371,
+                "name": "hasEntityExpirationDate",
+                "full_name": "ontology.xml.hasEntityExpirationDate",
+                "iri": "https://www.gleif.org/ontology/Base/hasEntityExpirationDate"
+            },
+            {
+                "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+                "storid": 349,
+                "name": "identifies",
+                "full_name": "ontology.xml.identifies",
+                "iri": "https://www.gleif.org/ontology/Base/identifies"
+            },
+            {
+                "is_a": "[owl.FunctionalProperty, core.notation]",
+                "storid": 389,
+                "name": "hasTag",
+                "full_name": "ontology.xml.hasTag",
+                "iri": "https://www.gleif.org/ontology/Base/hasTag"
+            },
+            {
+                "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+                "storid": 345,
+                "name": "hasSource",
+                "full_name": "ontology.xml.hasSource",
+                "iri": "https://www.gleif.org/ontology/Base/hasSource"
+            },
+            {
+                "is_a": "[owl.ObjectProperty, owl.FunctionalProperty]",
+                "storid": 348,
+                "name": "hasTarget",
+                "full_name": "ontology.xml.hasTarget",
+                "iri": "https://www.gleif.org/ontology/Base/hasTarget"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 387,
+                "name": "hasStart",
+                "full_name": "ontology.xml.hasStart",
+                "iri": "https://www.gleif.org/ontology/Base/hasStart"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 369,
+                "name": "hasEnd",
+                "full_name": "ontology.xml.hasEnd",
+                "iri": "https://www.gleif.org/ontology/Base/hasEnd"
+            },
+            {
+                "is_a": "[ontology.xml.hasGeographicRegion]",
+                "storid": 331,
+                "name": "hasCountry",
+                "full_name": "ontology.xml.hasCountry",
+                "iri": "https://www.gleif.org/ontology/Base/hasCountry"
+            },
+            {
+                "is_a": "[CountryRepresentation.GeopoliticalEntity, CountryRepresentation.hasEnglishShortName.exactly(1, owl.Thing), CountryRepresentation.hasFrenchShortNameInCapitals.exactly(1, owl.Thing), CountryRepresentation.hasEnglishShortNameInCapitals.exactly(1, owl.Thing), CountryRepresentation.hasFrenchShortName.exactly(1, owl.Thing), CountryRepresentation.hasEnglishFullName.max(1, owl.Thing), CountryRepresentation.hasFrenchFullName.max(1, owl.Thing), CountryRepresentation.usesAdministrativeLanguage.only(LanguageRepresentation.Language), CountryRepresentation.isIndependent.exactly(1, <class 'bool'>)]",
+                "storid": 333,
+                "name": "Country",
+                "full_name": "CountryRepresentation.Country",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country"
+            },
+            {
+                "is_a": "[ontology.xml.hasGeographicRegion]",
+                "storid": 341,
+                "name": "hasRegion",
+                "full_name": "ontology.xml.hasRegion",
+                "iri": "https://www.gleif.org/ontology/Base/hasRegion"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 401,
+                "name": "Region",
+                "full_name": "CountryRepresentation.Region",
+                "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Region"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 361,
+                "name": "hasAddressLine1",
+                "full_name": "ontology.xml.hasAddressLine1",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddressLine1"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 368,
+                "name": "hasCity",
+                "full_name": "ontology.xml.hasCity",
+                "iri": "https://www.gleif.org/ontology/Base/hasCity"
+            },
+            {
+                "is_a": "[ontology.xml.hasAdditionalAddressLine]",
+                "storid": 363,
+                "name": "hasAddressLine2",
+                "full_name": "ontology.xml.hasAddressLine2",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddressLine2"
+            },
+            {
+                "is_a": "[ontology.xml.hasAdditionalAddressLine]",
+                "storid": 364,
+                "name": "hasAddressLine3",
+                "full_name": "ontology.xml.hasAddressLine3",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddressLine3"
+            },
+            {
+                "is_a": "[ontology.xml.hasAdditionalAddressLine]",
+                "storid": 365,
+                "name": "hasAddressLine4",
+                "full_name": "ontology.xml.hasAddressLine4",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddressLine4"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 366,
+                "name": "hasAddressNumber",
+                "full_name": "ontology.xml.hasAddressNumber",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddressNumber"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 367,
+                "name": "hasAddressNumberWithinBuilding",
+                "full_name": "ontology.xml.hasAddressNumberWithinBuilding",
+                "iri": "https://www.gleif.org/ontology/Base/hasAddressNumberWithinBuilding"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 374,
+                "name": "hasMailRouting",
+                "full_name": "ontology.xml.hasMailRouting",
+                "iri": "https://www.gleif.org/ontology/Base/hasMailRouting"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 386,
+                "name": "hasPostalCode",
+                "full_name": "ontology.xml.hasPostalCode",
+                "iri": "https://www.gleif.org/ontology/Base/hasPostalCode"
+            },
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 350,
+                "name": "isManagedBy",
+                "full_name": "ontology.xml.isManagedBy",
+                "iri": "https://www.gleif.org/ontology/Base/isManagedBy"
+            },
+            {
+                "is_a": "[owl.ObjectProperty]",
+                "storid": 352,
+                "name": "isRegisteredIn",
+                "full_name": "ontology.xml.isRegisteredIn",
+                "iri": "https://www.gleif.org/ontology/Base/isRegisteredIn"
+            },
+            {
+                "is_a": "[owl.Thing, ontology.xml.isManagedBy.exactly(1, ontology.xml.Entity)]",
+                "storid": 353,
+                "name": "Registry",
+                "full_name": "ontology.xml.Registry",
+                "iri": "https://www.gleif.org/ontology/Base/Registry"
+            },
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 36,
+                "name": "AllDifferent",
+                "full_name": "owl.AllDifferent",
+                "iri": "http://www.w3.org/2002/07/owl#AllDifferent"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/EntityExpirationReason": {
+        "is_a": "[owl.Thing]",
+        "storid": 337,
+        "name": "EntityExpirationReason",
+        "full_name": "ontology.xml.EntityExpirationReason",
+        "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReason",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": -7,
+                "name": "-7",
+                "full_name": "_:7",
+                "iri": "https://www.gleif.org/ontology/Base/-7"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/-7": {
+        "is_a": "[owl.Thing]",
+        "storid": -7,
+        "name": "-7",
+        "full_name": "_:7",
+        "iri": "https://www.gleif.org/ontology/Base/-7"
+    },
+    "https://www.gleif.org/ontology/Base/EntityStatus": {
+        "is_a": "[owl.Thing]",
+        "storid": 339,
+        "name": "EntityStatus",
+        "full_name": "ontology.xml.EntityStatus",
+        "iri": "https://www.gleif.org/ontology/Base/EntityStatus",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": -11,
+                "name": "-11",
+                "full_name": "_:11",
+                "iri": "https://www.gleif.org/ontology/Base/-11"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/-11": {
+        "is_a": "[owl.Thing]",
+        "storid": -11,
+        "name": "-11",
+        "full_name": "_:11",
+        "iri": "https://www.gleif.org/ontology/Base/-11"
+    },
+    "https://www.gleif.org/ontology/Base/Identifier": {
+        "is_a": "[owl.Thing, ontology.xml.identifies.exactly(1, owl.Thing), ontology.xml.hasTag.exactly(1, <class 'str'>)]",
+        "storid": 399,
+        "name": "Identifier",
+        "full_name": "ontology.xml.Identifier",
+        "iri": "https://www.gleif.org/ontology/Base/Identifier",
+        "object": [
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -14,
+                "name": "",
+                "full_name": "_:14",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -15,
+                "name": "",
+                "full_name": "_:15",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/LegalEntityRelationship": {
+        "is_a": "[owl.Thing, ontology.xml.hasSource.exactly(1, ontology.xml.Entity), ontology.xml.hasTarget.exactly(1, ontology.xml.Entity)]",
+        "storid": 346,
+        "name": "LegalEntityRelationship",
+        "full_name": "ontology.xml.LegalEntityRelationship",
+        "iri": "https://www.gleif.org/ontology/Base/LegalEntityRelationship",
+        "object": [
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -16,
+                "name": "",
+                "full_name": "_:16",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -17,
+                "name": "",
+                "full_name": "_:17",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/LegalPerson": {
+        "is_a": "[ontology.xml.Entity]",
+        "storid": 400,
+        "name": "LegalPerson",
+        "full_name": "ontology.xml.LegalPerson",
+        "iri": "https://www.gleif.org/ontology/Base/LegalPerson",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/Period": {
+        "is_a": "[owl.Thing, ontology.xml.hasStart.exactly(1, <class 'datetime.datetime'>), ontology.xml.hasEnd.max(1, <class 'datetime.datetime'>)]",
+        "storid": 370,
+        "name": "Period",
+        "full_name": "ontology.xml.Period",
+        "iri": "https://www.gleif.org/ontology/Base/Period",
+        "object": [
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -18,
+                "name": "",
+                "full_name": "_:18",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -19,
+                "name": "",
+                "full_name": "_:19",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/PhysicalAddress": {
+        "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+        "storid": 326,
+        "name": "PhysicalAddress",
+        "full_name": "ontology.xml.PhysicalAddress",
+        "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress",
+        "object": [
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -20,
+                "name": "",
+                "full_name": "_:20",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -21,
+                "name": "",
+                "full_name": "_:21",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -22,
+                "name": "",
+                "full_name": "_:22",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -23,
+                "name": "",
+                "full_name": "_:23",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -24,
+                "name": "",
+                "full_name": "_:24",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -25,
+                "name": "",
+                "full_name": "_:25",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -26,
+                "name": "",
+                "full_name": "_:26",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -27,
+                "name": "",
+                "full_name": "_:27",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -28,
+                "name": "",
+                "full_name": "_:28",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -29,
+                "name": "",
+                "full_name": "_:29",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -30,
+                "name": "",
+                "full_name": "_:30",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/PhysicalAddressASCII": {
+        "is_a": "[ontology.xml.PhysicalAddress]",
+        "storid": 330,
+        "name": "PhysicalAddressASCII",
+        "full_name": "ontology.xml.PhysicalAddressASCII",
+        "iri": "https://www.gleif.org/ontology/Base/PhysicalAddressASCII",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasCountry.exactly(1, CountryRepresentation.Country), ontology.xml.hasRegion.max(1, CountryRepresentation.Region), ontology.xml.hasAddressLine1.exactly(1, owl.Thing), ontology.xml.hasCity.exactly(1, owl.Thing), ontology.xml.hasAddressLine2.max(1, owl.Thing), ontology.xml.hasAddressLine3.max(1, owl.Thing), ontology.xml.hasAddressLine4.max(1, owl.Thing), ontology.xml.hasAddressNumber.max(1, owl.Thing), ontology.xml.hasAddressNumberWithinBuilding.max(1, owl.Thing), ontology.xml.hasMailRouting.max(1, owl.Thing), ontology.xml.hasPostalCode.max(1, owl.Thing)]",
+                "storid": 326,
+                "name": "PhysicalAddress",
+                "full_name": "ontology.xml.PhysicalAddress",
+                "iri": "https://www.gleif.org/ontology/Base/PhysicalAddress"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/RegistrationAuthority": {
+        "is_a": "[ontology.xml.Entity]",
+        "storid": 402,
+        "name": "RegistrationAuthority",
+        "full_name": "ontology.xml.RegistrationAuthority",
+        "iri": "https://www.gleif.org/ontology/Base/RegistrationAuthority",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.hasLegalJurisdiction.min(0, CountryRepresentation.GeographicRegion), ontology.xml.hasSuccessor.min(0, ontology.xml.Entity), ontology.xml.hasEntityStatus.exactly(1, ontology.xml.EntityStatus), ontology.xml.hasEntityExpirationReason.max(1, ontology.xml.EntityExpirationReason), ontology.xml.hasNameLegalLocal.exactly(1, owl.Thing), ontology.xml.hasEntityExpirationDate.max(1, <class 'datetime.datetime'>)]",
+                "storid": 325,
+                "name": "Entity",
+                "full_name": "ontology.xml.Entity",
+                "iri": "https://www.gleif.org/ontology/Base/Entity"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 317,
+                "name": "altLabel",
+                "full_name": "core.altLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#altLabel"
+            },
+            {
+                "is_a": "[owl.DatatypeProperty]",
+                "storid": 322,
+                "name": "prefLabel",
+                "full_name": "core.prefLabel",
+                "iri": "http://www.w3.org/2004/02/skos/core#prefLabel"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/RegistrationStatus": {
+        "is_a": "[owl.Thing]",
+        "storid": 344,
+        "name": "RegistrationStatus",
+        "full_name": "ontology.xml.RegistrationStatus",
+        "iri": "https://www.gleif.org/ontology/Base/RegistrationStatus",
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ],
+        "object": [
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/Registry": {
+        "is_a": "[owl.Thing, ontology.xml.isManagedBy.exactly(1, ontology.xml.Entity)]",
+        "storid": 353,
+        "name": "Registry",
+        "full_name": "ontology.xml.Registry",
+        "iri": "https://www.gleif.org/ontology/Base/Registry",
+        "object": [
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -31,
+                "name": "",
+                "full_name": "_:31",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/RegistryEntry": {
+        "is_a": "[owl.Thing]",
+        "storid": 355,
+        "name": "RegistryEntry",
+        "full_name": "ontology.xml.RegistryEntry",
+        "iri": "https://www.gleif.org/ontology/Base/RegistryEntry",
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ],
+        "object": [
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/RegistryIdentifier": {
+        "is_a": "[ontology.xml.Identifier, ontology.xml.isRegisteredIn.some(ontology.xml.Registry)]",
+        "storid": 403,
+        "name": "RegistryIdentifier",
+        "full_name": "ontology.xml.RegistryIdentifier",
+        "iri": "https://www.gleif.org/ontology/Base/RegistryIdentifier",
+        "object": [
+            {
+                "is_a": "[owl.Thing, ontology.xml.identifies.exactly(1, owl.Thing), ontology.xml.hasTag.exactly(1, <class 'str'>)]",
+                "storid": 399,
+                "name": "Identifier",
+                "full_name": "ontology.xml.Identifier",
+                "iri": "https://www.gleif.org/ontology/Base/Identifier"
+            },
+            {
+                "is_a": "[owl.Restriction]",
+                "storid": -32,
+                "name": "",
+                "full_name": "_:32",
+                "iri": ""
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Region": {
+        "is_a": "[owl.Thing]",
+        "storid": 401,
+        "name": "Region",
+        "full_name": "CountryRepresentation.Region",
+        "iri": "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Region"
+    },
+    "https://www.gleif.org/ontology/Base/EntityExpirationReasonCorporateAction": {
+        "is_a": "[ontology.xml.EntityExpirationReason]",
+        "storid": 394,
+        "name": "EntityExpirationReasonCorporateAction",
+        "full_name": "ontology.xml.EntityExpirationReasonCorporateAction",
+        "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReasonCorporateAction",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 337,
+                "name": "EntityExpirationReason",
+                "full_name": "ontology.xml.EntityExpirationReason",
+                "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReason"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.FunctionalProperty, core.notation]",
+                "storid": 389,
+                "name": "hasTag",
+                "full_name": "ontology.xml.hasTag",
+                "iri": "https://www.gleif.org/ontology/Base/hasTag"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/EntityExpirationReasonDissolved": {
+        "is_a": "[ontology.xml.EntityExpirationReason]",
+        "storid": 395,
+        "name": "EntityExpirationReasonDissolved",
+        "full_name": "ontology.xml.EntityExpirationReasonDissolved",
+        "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReasonDissolved",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 337,
+                "name": "EntityExpirationReason",
+                "full_name": "ontology.xml.EntityExpirationReason",
+                "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReason"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.FunctionalProperty, core.notation]",
+                "storid": 389,
+                "name": "hasTag",
+                "full_name": "ontology.xml.hasTag",
+                "iri": "https://www.gleif.org/ontology/Base/hasTag"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/EntityExpirationReasonOther": {
+        "is_a": "[ontology.xml.EntityExpirationReason]",
+        "storid": 396,
+        "name": "EntityExpirationReasonOther",
+        "full_name": "ontology.xml.EntityExpirationReasonOther",
+        "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReasonOther",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 337,
+                "name": "EntityExpirationReason",
+                "full_name": "ontology.xml.EntityExpirationReason",
+                "iri": "https://www.gleif.org/ontology/Base/EntityExpirationReason"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.FunctionalProperty, core.notation]",
+                "storid": 389,
+                "name": "hasTag",
+                "full_name": "ontology.xml.hasTag",
+                "iri": "https://www.gleif.org/ontology/Base/hasTag"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/EntityStatusActive": {
+        "is_a": "[ontology.xml.EntityStatus]",
+        "storid": 397,
+        "name": "EntityStatusActive",
+        "full_name": "ontology.xml.EntityStatusActive",
+        "iri": "https://www.gleif.org/ontology/Base/EntityStatusActive",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 339,
+                "name": "EntityStatus",
+                "full_name": "ontology.xml.EntityStatus",
+                "iri": "https://www.gleif.org/ontology/Base/EntityStatus"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.FunctionalProperty, core.notation]",
+                "storid": 389,
+                "name": "hasTag",
+                "full_name": "ontology.xml.hasTag",
+                "iri": "https://www.gleif.org/ontology/Base/hasTag"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/EntityStatusInactive": {
+        "is_a": "[ontology.xml.EntityStatus]",
+        "storid": 398,
+        "name": "EntityStatusInactive",
+        "full_name": "ontology.xml.EntityStatusInactive",
+        "iri": "https://www.gleif.org/ontology/Base/EntityStatusInactive",
+        "object": [
+            {
+                "is_a": "[owl.Thing]",
+                "storid": 339,
+                "name": "EntityStatus",
+                "full_name": "ontology.xml.EntityStatus",
+                "iri": "https://www.gleif.org/ontology/Base/EntityStatus"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[owl.FunctionalProperty, core.notation]",
+                "storid": 389,
+                "name": "hasTag",
+                "full_name": "ontology.xml.hasTag",
+                "iri": "https://www.gleif.org/ontology/Base/hasTag"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 40,
+                "name": "label",
+                "full_name": "rdf-schema.label",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#label"
+            }
+        ]
+    },
+    "https://www.gleif.org/ontology/Base/GLEIF": {
+        "is_a": "[ontology.xml.RegistrationAuthority]",
+        "storid": 312,
+        "name": "GLEIF",
+        "full_name": "ontology.xml.GLEIF",
+        "iri": "https://www.gleif.org/ontology/Base/GLEIF",
+        "object": [
+            {
+                "is_a": "[ontology.xml.Entity]",
+                "storid": 402,
+                "name": "RegistrationAuthority",
+                "full_name": "ontology.xml.RegistrationAuthority",
+                "iri": "https://www.gleif.org/ontology/Base/RegistrationAuthority"
+            },
+            {
+                "is_a": "[owl.Ontology, voaf.Vocabulary]",
+                "storid": 303,
+                "name": "Base",
+                "full_name": "ontology.Base",
+                "iri": "https://www.gleif.org/ontology/Base"
+            }
+        ],
+        "property": [
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 113,
+                "name": "isDefinedBy",
+                "full_name": "rdf-schema.isDefinedBy",
+                "iri": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+            },
+            {
+                "is_a": "[ontology.xml.hasNameLegal, ontology.xml.hasNameLocal]",
+                "storid": 321,
+                "name": "hasNameLegalLocal",
+                "full_name": "ontology.xml.hasNameLegalLocal",
+                "iri": "https://www.gleif.org/ontology/Base/hasNameLegalLocal"
+            },
+            {
+                "is_a": "[owl.AnnotationProperty]",
+                "storid": 318,
+                "name": "hasLegalName",
+                "full_name": "ontology.xml.hasLegalName",
+                "iri": "https://www.gleif.org/ontology/Base/hasLegalName"
+            }
+        ]
+    }
+}
