@@ -7,3 +7,8 @@ tqdm
 owlready2
 requests
 spacy
+pypdf
+pydub
+transformers 
+torch 
+acceleration
