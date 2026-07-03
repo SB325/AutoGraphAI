@@ -1,19 +1,48 @@
 import pdb
+import os
 import argparse
 import torch
 from pathlib import Path
 from pydub import AudioSegment
 from transformers import WhisperProcessor, WhisperForConditionalGeneration
-from pyannote.audio import Pipeline
+from pyannote.audio import Pipeline   
 from dotenv import load_dotenv
+import wave
+import torchaudio
+import torchaudio.transforms as T
+from pyannote.audio.core.task import Specifications  # <-- Import the class explicitly
 
+# 1. Group the required safe classes together
+allowed_classes = [
+    torch.torch_version.TorchVersion,
+    Specifications
+]
+torch.serialization.add_safe_globals([torch.torch_version.TorchVersion])
 load_dotenv() 
 
 diarization_model_name = os.getenv("DIARIZATION_MODEL_NAME")
 asr_model_name = os.getenv("ASR_MODEL_NAME")
-hf_token = os.getenv(HUGGING_FACE_HUB_TOKEN)
+hf_token = os.getenv("HUGGING_FACE_HUB_TOKEN")
 
-    return diarization
+def get_sampling_rate(filename: str):
+    with wave.open(filename, "rb") as wave_file:
+        sample_rate = wave_file.getframerate()
+    return sample_rate
+
+def resample_audio(filename: str):
+    # 1. Load the original audio array
+    waveform, original_sample_rate = torchaudio.load(filename) 
+    target_sample_rate = 16000
+    if original_sample_rate != target_sample_rate:
+        resampler = T.Resample(orig_freq=original_sample_rate, new_freq=target_sample_rate)
+        waveform = resampler(waveform)
+
+    if waveform.shape[0] > 1:
+        waveform = waveform.mean(dim=0, keepdim=True)
+
+    raw_speech = waveform.squeeze().numpy()
+
+    return raw_speech
 
 def load_file(filename: str = "", 
     diarize: bool = False, 
@@ -24,21 +53,26 @@ def load_file(filename: str = "",
     elif not Path(filename).is_file():
         print("The file does not exist.")
     else:
-        content = {'source': 'audio', 'filename': filename, 'content', [], 'diarized': False}
+        content = {'source': 'audio', 'filename': filename, 'content': [], 'diarized': False}
         ext = Path(filename).suffix
 
         # Load mp4 txt file
-        if not ext in ['mp3','mp4','wav']:
-            print(f"Audio format - {} - not recognized.")
+        if not ext in ['.mp3','.mp4','.wav']:
+            print(f"Audio format - {ext} - not recognized.")
         else:
             # Transcribe filename with Auto Speech Recognition (ASR) Model
-            processor = WhisperProcessor.from_pretrained(model=asr_model_name)
-            model = WhisperForConditionalGeneration.from_pretrained(model=asr_model_name)
+            processor = WhisperProcessor.from_pretrained(pretrained_model_name_or_path=asr_model_name)
+            model = WhisperForConditionalGeneration.from_pretrained(pretrained_model_name_or_path=asr_model_name)
             model.config.forced_decoder_ids = None
 
             if diarize:
+                with torch.serialization.safe_globals(allowed_classes):
+                    pipeline = Pipeline.from_pretrained(diarization_model_name)
+                pipeline = Pipeline.from_pretrained(diarization_model_name)
+                diarization = pipeline(filename).speaker_diarization 
                 audio = AudioSegment.from_file(filename).set_frame_rate(16000).set_channels(1)
                 print("Transcribing segments...")
+                # pdb.set_trace()
                 for turn, _, speaker in diarization.itertracks(yield_label=True):
                     # Convert pyannote seconds (floats) to pydub milliseconds (ints)
                     start_ms = int(turn.start * 1000)
@@ -59,12 +93,12 @@ def load_file(filename: str = "",
                     # Feed the sample slice to the processor
                     input_features = processor(
                         numpy_samples.numpy(), 
-                        sampling_rate=16000, 
+                        sampling_rate=get_sampling_rate(filename), 
                         return_tensors="pt"
                     ).input_features
 
                     # Generate tokens and decode
-                    predicted_ids = model.generate(input_features)
+                    predicted_ids = model.generate(input_features, language="en" )
                     transcription = processor.batch_decode(predicted_ids, skip_special_tokens=True)[0]
 
                     # Save result with metadata
@@ -75,20 +109,25 @@ def load_file(filename: str = "",
                 content['diarized'] = True
 
             else:
-                ds = load_dataset(filename, "clean", split="validation")
-                sample = ds[0]["audio"]
+                # pdb.set_trace()
+                if get_sampling_rate(filename) != 16000:
+                    audio = resample_audio(filename)
+                else:
+                    audio = filename 
+
                 input_features = processor(
-                    filename, 
-                    sampling_rate=sample["sampling_rate"], 
+                    audio, 
+                    sampling_rate=16000, 
                     return_tensors="pt"
                     ).input_features 
 
                 # generate token ids
-                predicted_ids = model.generate(input_features)
+                predicted_ids = model.generate(input_features, language="en" )
                 # decode token ids to text
                 content['content'].append(
                     processor.batch_decode(
-                        predicted_ids, skip_special_tokens=True
+                        predicted_ids, 
+                        skip_special_tokens=True
                     )
                 )
 
@@ -97,10 +136,15 @@ def load_file(filename: str = "",
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Audio File Loader.')
     parser.add_argument('-f', '--file', required=True, help='Full path filename to load.')
+    parser.add_argument('-d', '--diarize', action='store_true', help='Diarization Flag.')
     parser.add_argument('--verbose', action='store_true', help='Enable verbose output.')
 
     args = parser.parse_args()
 
     # Extract content dictionary
-    content = load_file(verbose = args.verbose)
-    pdf.set_trace()
+    content = load_file(
+        filename = args.file, 
+        diarize = args.diarize, 
+        verbose = args.verbose
+        )
+    pdb.set_trace()

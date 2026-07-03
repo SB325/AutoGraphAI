@@ -27,7 +27,7 @@ def transcribe_video_clip(video_path: str, diarize: bool = False):
     device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
     print(f"Running inference on device: {device}")
 
-    content = {'source': 'video', 'filename': video_path, 'content', [], 'diarized': False}
+    content = {'source': 'video', 'filename': video_path, 'content': [], 'diarized': False}
 
     # 2. Extract and format the audio stream using pydub
     print("Extracting audio stream from video...")

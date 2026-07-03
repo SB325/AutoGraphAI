@@ -2,14 +2,33 @@
 name = "autographai"
 version = "0.1.0"
 description = "Add your description here"
-readme = "README.md"
+authors = [
+    { name = "Sheldon Bish", email = "sbish33@gmail.com" }
+]
 requires-python = ">=3.12"
 dependencies = [
-    "json-repair>=0.44.1",
-    "neo4j-graphrag>=1.14.1",
-    "owlready2>=0.50",
-    "pydantic>=2.13.1",
-    "python-dotenv>=1.2.2",
-    "rdflib-neo4j>=1.1",
-    "tqdm>=4.67.3",
+    "accelerate==0.31.0",
+    "json-repair==0.25.0",
+    "matplotlib==3.10.0",
+    "owlready2==0.46",
+    "pyannote-audio==3.3.1",
+    "pydantic==2.7.4",
+    "pydub==0.25.1",
+    "pypdf==4.2.0",
+    "python-dotenv==1.0.1",
+    "rdflib-neo4j==1.1.0",
+    "requests==2.32.3",
+    "spacy==3.7.5",
+    "torch==2.8.0",
+    "torchaudio==2.8.0",
+    "torchcodec==0.7.0",
+    "tqdm>=4.67.1",
+    "transformers==4.41.2",
 ]
+
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false

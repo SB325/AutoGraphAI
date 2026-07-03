@@ -1,14 +1,30 @@
-rdflib-neo4j
-python-dotenv
-#neo4j-graphrag
-pydantic
-json-repair
-tqdm
-owlready2
-requests
-spacy
-pypdf
-pydub
-transformers 
-torch 
-acceleration
+--extra-index-url https://pytorch.org
+
+# Base Neo4j Graph & GenAI Stack
+# neo4j-graphrag==1.2.0
+rdflib-neo4j==1.1.0
+python-dotenv==1.0.1
+
+# Validation & Core Utilities
+pydantic==2.7.4
+json-repair==0.25.0
+tqdm>=4.67.1
+requests==2.32.3
+
+# Deep Learning & Transformers (CUDA 12.1 Compatible)
+torch==2.8.0
+transformers==4.41.2
+accelerate==0.31.0
+torchaudio==2.8.0
+torchcodec==0.7.0
+
+# NLP & Document Processing
+spacy==3.7.5
+pypdf==4.2.0
+
+# Ontologies & Audio
+owlready2==0.46
+pydub==0.25.1
+pyannote-audio==3.3.1
+
+matplotlib==3.10.0
