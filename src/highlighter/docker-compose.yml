@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  highlighter:
+    build: .
+    container_name: highlighter
+    ports:
+      - "${HIGHLIGHTER_PORT}:${HIGHLIGHTER_PORT}"
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - HIGHLIGHTER_PORT=${HIGHLIGHTER_PORT}
+    networks:
+     - homeserver

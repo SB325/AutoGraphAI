@@ -66,7 +66,7 @@ if __name__ == "__main__":
     end = time.perf_counter()
     
     print("SEC Extraction Results:")
-    pdb.set_trace()
+
     for rel in results['relation_extraction']:
         pdb.set_trace()
         head = results['entities'][rel['head']]

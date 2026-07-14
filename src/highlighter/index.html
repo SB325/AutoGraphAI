@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Text Highlighter</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f4f5f6;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            max-width: 600px;
+            width: 100%;
+        }
+        #text-container {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+            white-space: pre-wrap; /* Keeps formatting from python strings intact */
+        }
+        /* Custom highlight rule styled completely via CSS */
+        ::highlight(python-managed-highlight) {
+            background-color: #ffeb3b;
+            color: #000;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div id="text-container">Awaiting string data from Python script...</div>
+</div>
+
+<script>
+    const container = document.getElementById("text-container");
+    const eventSource = new EventSource("/api/stream");
+
+    eventSource.onmessage = (event) => {
+        const payload = JSON.parse(event.data);
+        
+        // 1. Update container text
+        container.textContent = payload.text;
+        
+        // The browser parses textContent into a clean, singular text node child
+        const textNode = container.firstChild;
+        if (!textNode) return;
+
+        // 2. Clear out older highlights
+        CSS.highlights.delete("python-managed-highlight");
+
+        // 3. Loop through your data objects and create Range boundaries
+        const ranges = payload.ranges.map(item => {
+            const range = new Range();
+            range.setStart(textNode, item.start);
+            range.setEnd(textNode, item.start + item.length);
+            return range;
+        });
+
+        // 4. Register the highlights to display instantly in UI
+        const textHighlight = new Highlight(...ranges);
+        CSS.highlights.set("python-managed-highlight", textHighlight);
+    };
+</script>
+</body>
+</html>
