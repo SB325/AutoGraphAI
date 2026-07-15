@@ -41,9 +41,10 @@
 
 <script>
     const container = document.getElementById("text-container");
-    const eventSource = new EventSource("/api/stream");
+    const eventSource = new EventSource("/highlighter/api/stream");
 
     eventSource.onmessage = (event) => {
+        console.log("Received data from stream:", event.data);
         const payload = JSON.parse(event.data);
         
         // 1. Update container text
@@ -68,6 +69,10 @@
         const textHighlight = new Highlight(...ranges);
         CSS.highlights.set("python-managed-highlight", textHighlight);
     };
+
+    eventSource.onerror = (error) => {
+        console.error("EventSource failed:", error);
+    };  
 </script>
 </body>
 </html>
