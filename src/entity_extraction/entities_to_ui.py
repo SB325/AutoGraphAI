@@ -28,27 +28,20 @@ def get_highlighter_ip():
 
     return f'{ip}'
 
-def run(text: str, verbose: bool):
+def display_text_annotations(payload: dict, verbose: bool = False):
     # The exact object structure expected by the API
-    payload = {
-        "text": text,
-        "ranges": [
-            {"start": 0, "length": 6},    # Highlights "Python"
-            {"start": 11, "length": 6},   # Highlights "Docker"
-            {"start": 32, "length": 13}   # Highlights "UI components"
-        ]
-    }
 
+    path = "/api/highlight"
     if not target_behind_proxy:
         url = get_highlighter_ip()
         response = requests.post(
-            f"http://{url}:{highlighter_port}/highlighter/api/highlight", 
+            f"http://{url}:{highlighter_port}{path}", 
             json=payload,
             auth=(user, pw)
         )
     else:
         response = requests.post(
-            f"http://{base_url}:{highlighter_port}/highlighter/api/highlight", 
+            f"http://{base_url}:{highlighter_port}{path}", 
             json=payload,
             auth=(user, pw)
         )
@@ -63,5 +56,14 @@ if __name__ == "__main__":
     args = parser.parse_args()
     text = "Python and Docker make building UI components fast and simple. Yaay"
 
-    content = run(text = text, verbose = args.verbose)
+    payload = {
+        "text": text,
+        "ranges": [
+            {"start": 0, "length": 6},    # Highlights "Python"
+            {"start": 11, "length": 6},   # Highlights "Docker"
+            {"start": 32, "length": 13}   # Highlights "UI components"
+        ]
+    }
+
+    content = display_text_annotations(payload = payload, verbose = args.verbose)
     print(content)

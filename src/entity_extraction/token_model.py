@@ -1,8 +1,10 @@
 import json
 import spacy
 from dotenv import load_dotenv
+from entities_to_ui import display_text_annotations
 import pdb
 import os
+import copy
 
 load_dotenv()
 spacy_model = os.getenv("SPACY_MODEL")
@@ -33,11 +35,11 @@ def token_pos(doc, verbose: bool = True):
     for token in doc:
         if (token.pos_ != 'NOUN') & (token.pos_ != 'PRON') & (token.pos_ != 'CARDINAL'):
             continue
-        print(f"Text: {token.text}")
-        print(f"Position: {token.idx}")
-        print(f"Coarse POS Tag (pos_): {token.pos_}")    # Universal POS tag
-        print(f"Fine-grained Tag (tag_): {token.tag_}")  # Detailed Penn Treebank tag
-        print(f"Explanation: {spacy.explain(token.tag_)}")
+        # print(f"Text: {token.text}")
+        # print(f"Position: {token.idx}")
+        # print(f"Coarse POS Tag (pos_): {token.pos_}")    # Universal POS tag
+        # print(f"Fine-grained Tag (tag_): {token.tag_}")  # Detailed Penn Treebank tag
+        # print(f"Explanation: {spacy.explain(token.tag_)}")
         tokens.append(token)
     return tokens
     # Determine if it's a noun and classify its category
@@ -64,10 +66,15 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
     ent_list = []
 
     for ent in doc.ents:
+        # Edge case: closed parenthesis missing
+        trailing_character = ''
+        if ')' in text[ent.start_char + len(ent.text) ]:
+            trailing_character = ')'
+
         ent_data = {
-            "token_string": ent.text,
+            "token_string": ent.text + trailing_character,
             "first_character_index": ent.start_char,
-            "token_length": len(ent.text),
+            "token_length": len(ent.text + trailing_character),
             "token_type": {
                 "pos": ent.label_,  # e.g., 'PROPN', 'VERB', 'DET', 'PUNCT'
                 # "is_noun": is_noun,
@@ -96,6 +103,48 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
 
     return ent_list
 
+def decontiguize_entities(sample_text: str, entity_list: dict):
+    decontiguized_entities = []
+    skip = False
+    for ind, ent in enumerate(entity_list[:-1]):
+        
+        # slice gap_text from entity character ends
+        gap_text = sample_text[
+            (ent['first_character_index'] + ent['token_length']) :
+            entity_list[ind+1]['first_character_index']
+        ]
+        
+        if skip:
+            # This contiguous (second) entity was absorbed into first, so skip 
+            skip = False
+            continue
+
+        copied_ent = copy.deepcopy(ent)
+        decontiguized_entities.append(copied_ent)
+
+        gap_text_ = "".join(gap_text.split())
+        if (',' not in gap_text_) & \
+            ('.' not in gap_text_) & \
+            (len(gap_text_)==0):
+
+            # Edge case: multi token long entity is on newline
+            if '\n' in gap_text:
+                gap_text = gap_text.replace('\n', ' ')
+
+            decontiguized_entities[-1]["token_string"] = \
+                copied_ent['token_string'] + gap_text + entity_list[ind+1]['token_string']
+            decontiguized_entities[-1]["first_character_index"] = copied_ent['first_character_index']
+            decontiguized_entities[-1]["token_length"] = \
+                copied_ent['token_length'] + \
+                entity_list[ind+1]['token_length'] + \
+                len(gap_text)
+            print(f"{decontiguized_entities[-1]['token_string']}")
+            skip = True
+
+    copied_ent = copy.deepcopy(entity_list[-1])
+    decontiguized_entities.append(copied_ent)
+    return decontiguized_entities
+
 # --- Example Usage ---
 if __name__ == "__main__":
     sample_text = """
@@ -120,5 +169,18 @@ if __name__ == "__main__":
     
     sorted_output = sorted(output, key=lambda x: x["first_character_index"])
 
-    with open("data.json", "w", encoding="utf-8") as file:
-        json.dump(sorted_output, file, indent=4)
+    # Function that combines entities that are contiguous (not separated by another
+    # word or punctuation mark.)
+    clean_sorted_output = decontiguize_entities(sample_text, sorted_output)
+
+    text_list = []
+    for out in clean_sorted_output:
+        val = {"start": out['first_character_index'], 'length': out['token_length']}
+        text_list.append(val)
+
+    payload = {
+        'text': sample_text,
+        'ranges': text_list,
+    }
+    
+    display_text_annotations(payload)
