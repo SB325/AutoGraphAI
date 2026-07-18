@@ -5,6 +5,7 @@ from entities_to_ui import display_text_annotations
 import pdb
 import os
 import copy
+import argparse
 
 load_dotenv()
 spacy_model = os.getenv("SPACY_MODEL")
@@ -103,7 +104,7 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
 
     return ent_list
 
-def decontiguize_entities(sample_text: str, entity_list: dict):
+def decontiguize_entities(sample_text: str, entity_list: dict, verbose: bool):
     decontiguized_entities = []
     skip = False
     for ind, ent in enumerate(entity_list[:-1]):
@@ -138,7 +139,8 @@ def decontiguize_entities(sample_text: str, entity_list: dict):
                 copied_ent['token_length'] + \
                 entity_list[ind+1]['token_length'] + \
                 len(gap_text)
-            print(f"{decontiguized_entities[-1]['token_string']}")
+            if verbose:
+                print(f"{decontiguized_entities[-1]['token_string']}")
             skip = True
 
     copied_ent = copy.deepcopy(entity_list[-1])
@@ -147,31 +149,45 @@ def decontiguize_entities(sample_text: str, entity_list: dict):
 
 # --- Example Usage ---
 if __name__ == "__main__":
-    sample_text = """
-        The Foreign Ministry communicated the complaints to the US 
-        ambassador before filing them in the United States. 
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-t", "--text_sample", required=True, help="Sample Text for Entity extraction.")
+    parser.add_argument("-v", "--verbose", action='store_true', help="Print label outputs.", default=False)
+
+    args = parser.parse_args()
+
+    text_sample_file = args.text_sample
+    verbose = args.verbose
+
+    with open(text_sample_file, "r", encoding="utf-8") as file:
+        text_sample = file.read()
+        if verbose:
+            print(text_sample)
+
+    # text_sample = """
+    #     The Foreign Ministry communicated the complaints to the US 
+    #     ambassador before filing them in the United States. 
         
-        He was very receptive to 
-        our concerns regarding alleged human rights violations against Mexicans in 
-        detention centers, as well as the deaths of three Mexicans during operations 
-        by ICE (Immigration and Customs Enforcement),” she said. 
+    #     He was very receptive to 
+    #     our concerns regarding alleged human rights violations against Mexicans in 
+    #     detention centers, as well as the deaths of three Mexicans during operations 
+    #     by ICE (Immigration and Customs Enforcement),” she said. 
         
-        The president emphasized that protecting Mexicans abroad must be a national cause, 
-        amidst an escalation of her government’s actions regarding the situation 
-        of immigrants in the US. 
+    #     The president emphasized that protecting Mexicans abroad must be a national cause, 
+    #     amidst an escalation of her government’s actions regarding the situation 
+    #     of immigrants in the US. 
         
-        Days earlier, following the death of Salgado Araujo 
-        during an operation, Sheinbaum had indicated that the response would go 
-        “beyond” diplomatic notes.
-        """
-    
-    output = analyze_tokens(sample_text, verbose=False)
+    #     Days earlier, following the death of Salgado Araujo 
+    #     during an operation, Sheinbaum had indicated that the response would go 
+    #     “beyond” diplomatic notes.
+    #     """
+
+    output = analyze_tokens(text_sample, verbose=False)
     
     sorted_output = sorted(output, key=lambda x: x["first_character_index"])
 
     # Function that combines entities that are contiguous (not separated by another
     # word or punctuation mark.)
-    clean_sorted_output = decontiguize_entities(sample_text, sorted_output)
+    clean_sorted_output = decontiguize_entities(text_sample, sorted_output, verbose)
 
     text_list = []
     for out in clean_sorted_output:
@@ -179,7 +195,7 @@ if __name__ == "__main__":
         text_list.append(val)
 
     payload = {
-        'text': sample_text,
+        'text': text_sample,
         'ranges': text_list,
     }
     
