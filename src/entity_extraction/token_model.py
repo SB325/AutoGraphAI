@@ -6,6 +6,7 @@ import pdb
 import os
 import copy
 import argparse
+import re
 
 load_dotenv()
 spacy_model = os.getenv("SPACY_MODEL")
@@ -31,28 +32,40 @@ labels = {
     "CARDINAL": "Numerals, digits, or amounts that do not fit into other types.",
 }
 
-def token_pos(doc, verbose: bool = True):
+def get_word_at_index(text, index):
+    # Find all sequences of alphanumeric characters and their spans
+    for match in re.finditer(r'\w+', text):
+        start, end = match.span()
+        # Check if the target index falls within this word's boundaries
+        if start <= index < end:
+            return match.group()
+    return None
+
+def token_pos(doc, ent_list, verbose: bool = True):
     tokens = []
     for token in doc:
-        if (token.pos_ != 'NOUN') & (token.pos_ != 'PRON') & (token.pos_ != 'CARDINAL'):
+        if 'which' in token.text:
             continue
-        # print(f"Text: {token.text}")
-        # print(f"Position: {token.idx}")
-        # print(f"Coarse POS Tag (pos_): {token.pos_}")    # Universal POS tag
-        # print(f"Fine-grained Tag (tag_): {token.tag_}")  # Detailed Penn Treebank tag
-        # print(f"Explanation: {spacy.explain(token.tag_)}")
+        if (token.pos_ != 'NOUN') & (token.pos_ != 'PRON') & (token.pos_ != 'PROPN') & (token.pos_ != 'CARDINAL'):
+            continue
+        cont = False
+        for ent in ent_list:
+            if token.text in ent['token_string']:
+                if (token.idx >= ent['first_character_index']) & \
+                    (token.idx < (ent['first_character_index'] + ent['token_length'])):
+                    # This token is within an lready established entity label. continue
+                    cont=True
+                    break
+        if cont:
+            continue
+        if verbose:
+            print(f"Text: {token.text}")
+            print(f"Position: {token.idx}")
+            print(f"Coarse POS Tag (pos_): {token.pos_}")    # Universal POS tag
+            print(f"Fine-grained Tag (tag_): {token.tag_}")  # Detailed Penn Treebank tag
+            print(f"Explanation: {spacy.explain(token.tag_)}")
         tokens.append(token)
     return tokens
-    # Determine if it's a noun and classify its category
-    # NOUN = Common Noun, PROPN = Proper Noun
-    # is_noun = ent.label_ in ["NOUN", "PROPN"]
-    
-    # if is_noun:
-    #     noun_category = "PROPER_NOUN" if ent.label_ == "PROPN" else "COMMON_NOUN"
-    # else:
-    #     noun_category = "NOT_A_NOUN"
-        
-    # Structure the token dictionary exactly as requested
 
 def analyze_tokens(text: str, verbose: bool = True) -> list:
     """Tokenizes a string and returns metadata about each token."""
@@ -68,26 +81,33 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
 
     for ent in doc.ents:
         # Edge case: closed parenthesis missing
+        token = ent.text
         trailing_character = ''
-        if ')' in text[ent.start_char + len(ent.text) ]:
-            trailing_character = ')'
+        start_char = ent.start_char
 
+        if '[' in ent.text:
+            continue
+        # if '(' in ent.text:
+        #     continue
+        # if ')' in ent.text:
+        #     pdb.set_trace()
+        #     continue
         ent_data = {
-            "token_string": ent.text + trailing_character,
-            "first_character_index": ent.start_char,
-            "token_length": len(ent.text + trailing_character),
+            "token_string": token + trailing_character,
+            "first_character_index": start_char,
+            "token_length": len(token + trailing_character),
             "token_type": {
                 "pos": ent.label_,  # e.g., 'PROPN', 'VERB', 'DET', 'PUNCT'
-                # "is_noun": is_noun,
-                # "noun_category": noun_category
             }
         }
         ent_list.append(ent_data)
-    tokens = token_pos(doc, verbose) 
+    tokens = token_pos(doc, ent_list, verbose) 
 
     token_list = []
     for tok in tokens:
         if tok.idx in [ind['first_character_index'] for ind in ent_list]:
+            continue
+        if tok.idx in [ind['token_string'] for ind in ent_list]:
             continue
         token_list.append(
             {
@@ -104,7 +124,54 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
 
     return ent_list
 
-def decontiguize_entities(sample_text: str, entity_list: dict, verbose: bool):
+def tag_all_instances(text_sample: str, clean_sorted_output: list, indices: list):
+    # find all indices ( [val[2] for val in indices ] ) 
+    #   that are not in 
+    #   [ val["first_character_index"] for val in clean_sorted_output ]
+    #  and tag them.
+
+    # first char index of all recorded inds matching ent
+
+    recorded_inds = [ val["first_character_index"] for val in clean_sorted_output if 
+        (val['token_string'] in indices[0][0]) | (indices[0][0] in val['token_string']) ]
+    recorded_tokens = [ val["token_string"] for val in clean_sorted_output if 
+        (val['token_string'] in indices[0][0]) | (indices[0][0] in val['token_string']) ]
+    
+    # If all indices matching ent are recorded already, spacy got them all, nothing to add
+    if len(recorded_inds) == len(indices):
+        return 
+
+    # pos of all ents matching inds
+    pos = [ val["token_type"]["pos"] for val in clean_sorted_output if indices[0][0] in val['token_string'] ]
+
+    untagged_inds = []
+    for ind in indices:
+        if ind[1] not in recorded_inds:
+            # is this ind a matching ent or a substring of a word/token
+            # if single word:
+            if not ind[0].count(" "):
+                # omit erroneous non-nouns from clean_sorted_output list
+                if 'the' in get_word_at_index(text_sample, ind[1]):
+                    continue
+                if get_word_at_index(text_sample, ind[1]) not in recorded_tokens[0]:
+                    continue
+            # if multi-word token:
+            else:
+                if ind[0] != recorded_tokens[0]:
+                    continue
+            untagged_inds.append(
+                {
+                    "token_string": ind[0],
+                    "first_character_index": ind[1],
+                    "token_length": len(ind[0]),
+                    "token_type": {
+                        "pos": pos[0],
+                    }
+                }
+            )
+    clean_sorted_output.extend(untagged_inds)
+
+def decontiguize_entities(sample_text: str, entity_list: list, verbose: bool):
     decontiguized_entities = []
     skip = False
     for ind, ent in enumerate(entity_list[:-1]):
@@ -163,24 +230,6 @@ if __name__ == "__main__":
         if verbose:
             print(text_sample)
 
-    # text_sample = """
-    #     The Foreign Ministry communicated the complaints to the US 
-    #     ambassador before filing them in the United States. 
-        
-    #     He was very receptive to 
-    #     our concerns regarding alleged human rights violations against Mexicans in 
-    #     detention centers, as well as the deaths of three Mexicans during operations 
-    #     by ICE (Immigration and Customs Enforcement),” she said. 
-        
-    #     The president emphasized that protecting Mexicans abroad must be a national cause, 
-    #     amidst an escalation of her government’s actions regarding the situation 
-    #     of immigrants in the US. 
-        
-    #     Days earlier, following the death of Salgado Araujo 
-    #     during an operation, Sheinbaum had indicated that the response would go 
-    #     “beyond” diplomatic notes.
-    #     """
-
     output = analyze_tokens(text_sample, verbose=False)
     
     sorted_output = sorted(output, key=lambda x: x["first_character_index"])
@@ -188,6 +237,16 @@ if __name__ == "__main__":
     # Function that combines entities that are contiguous (not separated by another
     # word or punctuation mark.)
     clean_sorted_output = decontiguize_entities(text_sample, sorted_output, verbose)
+    
+
+    for ent in clean_sorted_output:
+        try:
+            indices = [(m.group(), m.start()) for m in re.finditer(rf"{ent['token_string']}(?=[\s\W])", text_sample)]
+        except:
+            pass
+        if len(indices) > 1:
+            # Find untagged instances of tagged entities in text and tag them
+            tag_all_instances(text_sample, clean_sorted_output, indices)
 
     text_list = []
     for out in clean_sorted_output:
@@ -198,5 +257,6 @@ if __name__ == "__main__":
         'text': text_sample,
         'ranges': text_list,
     }
-    
+
+    # pdb.set_trace()
     display_text_annotations(payload)
