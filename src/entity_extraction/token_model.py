@@ -7,6 +7,7 @@ import os
 import copy
 import argparse
 import re
+import json
 
 load_dotenv()
 spacy_model = os.getenv("SPACY_MODEL")
@@ -67,7 +68,7 @@ def token_pos(doc, ent_list, verbose: bool = True):
         tokens.append(token)
     return tokens
 
-def analyze_tokens(text: str, verbose: bool = True) -> list:
+def analyze_tokens(text: str, verbose: bool = False) -> list:
     """Tokenizes a string and returns metadata about each token."""
     # Load the English NLP model
     try:
@@ -87,18 +88,11 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
 
         if '[' in ent.text:
             continue
-        # if '(' in ent.text:
-        #     continue
-        # if ')' in ent.text:
-        #     pdb.set_trace()
-        #     continue
         ent_data = {
             "token_string": token + trailing_character,
             "first_character_index": start_char,
             "token_length": len(token + trailing_character),
-            "token_type": {
-                "pos": ent.label_,  # e.g., 'PROPN', 'VERB', 'DET', 'PUNCT'
-            }
+            "pos": ent.label_,  # e.g., 'PROPN', 'VERB', 'DET', 'PUNCT'
         }
         ent_list.append(ent_data)
     tokens = token_pos(doc, ent_list, verbose) 
@@ -114,9 +108,7 @@ def analyze_tokens(text: str, verbose: bool = True) -> list:
                 "token_string": tok.text,
                 "first_character_index": tok.idx,
                 "token_length": len(tok.text),
-                "token_type": {
-                    "pos": tok.pos_,
-                }
+                "pos": tok.pos_,
             }
         )
 
@@ -142,7 +134,7 @@ def tag_all_instances(text_sample: str, clean_sorted_output: list, indices: list
         return 
 
     # pos of all ents matching inds
-    pos = [ val["token_type"]["pos"] for val in clean_sorted_output if indices[0][0] in val['token_string'] ]
+    pos = [ val["pos"] for val in clean_sorted_output if indices[0][0] in val['token_string'] ]
 
     untagged_inds = []
     for ind in indices:
@@ -164,16 +156,17 @@ def tag_all_instances(text_sample: str, clean_sorted_output: list, indices: list
                     "token_string": ind[0],
                     "first_character_index": ind[1],
                     "token_length": len(ind[0]),
-                    "token_type": {
-                        "pos": pos[0],
-                    }
+                    "pos": pos[0],
                 }
             )
     clean_sorted_output.extend(untagged_inds)
 
 def decontiguize_entities(sample_text: str, entity_list: list, verbose: bool):
+    # Two entity labels should be separated by more than one whitespace. Otherwise they 
+    # should be combined.
     decontiguized_entities = []
     skip = False
+    
     for ind, ent in enumerate(entity_list[:-1]):
         
         # slice gap_text from entity character ends
@@ -181,16 +174,11 @@ def decontiguize_entities(sample_text: str, entity_list: list, verbose: bool):
             (ent['first_character_index'] + ent['token_length']) :
             entity_list[ind+1]['first_character_index']
         ]
-        
-        if skip:
-            # This contiguous (second) entity was absorbed into first, so skip 
-            skip = False
-            continue
 
         copied_ent = copy.deepcopy(ent)
         decontiguized_entities.append(copied_ent)
 
-        gap_text_ = "".join(gap_text.split())
+        gap_text_ = "".join(gap_text.split()) # if empty, combine.
         if (',' not in gap_text_) & \
             ('.' not in gap_text_) & \
             (len(gap_text_)==0):
@@ -201,18 +189,121 @@ def decontiguize_entities(sample_text: str, entity_list: list, verbose: bool):
 
             decontiguized_entities[-1]["token_string"] = \
                 copied_ent['token_string'] + gap_text + entity_list[ind+1]['token_string']
-            decontiguized_entities[-1]["first_character_index"] = copied_ent['first_character_index']
+            # decontiguized_entities[-1]["first_character_index"] = copied_ent['first_character_index']
             decontiguized_entities[-1]["token_length"] = \
                 copied_ent['token_length'] + \
                 entity_list[ind+1]['token_length'] + \
                 len(gap_text)
-            if verbose:
-                print(f"{decontiguized_entities[-1]['token_string']}")
+            # if verbose:
+            #     print(f"{decontiguized_entities[-1]['token_string']}")
             skip = True
-
+        else:        
+            if skip:
+                # This contiguous (second) entity was absorbed into first, so skip 
+                skip = False
+                continue
     copied_ent = copy.deepcopy(entity_list[-1])
     decontiguized_entities.append(copied_ent)
     return decontiguized_entities
+
+def omit_nuissance(entity_list: list, omit_strings):
+    # Omits the entire entity if it contains a string in 'omit_strings'
+    # list omit_strings in order of decreasing size
+    omit_strings.sort(key=len, reverse=True)
+
+    removal = []
+    for cnt, ent in enumerate(entity_list):
+        entity = ent['token_string']
+        if any(omit in entity for omit in omit_strings): # if any omit strings are in ent
+            # is ent==omit? If so, eliminate entity from list altogether
+            if any(omit==entity for omit in omit_strings):
+                removal.append(cnt)
+                continue
+            # omit is only part of entity label. remove omit and keep the rest of the entity label
+            for omit in omit_strings:
+                ind = entity.find(omit)
+                if ind > 0: # replace with empty string and subtract length
+                    ent['token_string'].replace(omit, '')
+                    ent['token_length'] = ent['token_length'] - len(omit)
+                elif ind == 0: #
+                    ent['token_string'].replace(omit, '')
+                    ent['token_length'] = ent['token_length'] - len(omit)
+                    ent['first_character_index'] = ent['first_character_index'] + len(omit)
+
+    entity_list = [val for cnt, val in enumerate(entity_list) if cnt not in removal]
+
+    return entity_list
+
+def remove_characters(entity_list: list, removal_characters: list):
+    # removes 'removal_characters' characters from token_string
+    new_tokens = []
+
+    for ent in entity_list:
+        copied_ent = copy.deepcopy(ent)
+        matching_strings = [character for character in removal_characters if character in copied_ent['token_string']]
+
+        if not any(matching_strings) :
+            new_tokens.append(copied_ent)
+            continue
+        else:
+            for match in matching_strings:
+                ind = copied_ent['token_string'].find(match)
+
+                if ind <0:
+                    continue
+                elif ind == 0:
+                    copied_ent['token_string'] = copied_ent['token_string'].replace(match, '')
+                    copied_ent['token_length'] = copied_ent['token_length'] - len(match)
+                    copied_ent['first_character_index'] = copied_ent['first_character_index'] + len(match)
+                else:
+                    # remove matching character and all characters following it.
+                    delimited = copied_ent['token_string'].split(match)
+                    all_up_to_delimiter = delimited[0]
+                    if all_up_to_delimiter in ['Mr', 'Mrs', 'Dr']:
+                        new_tokens.append(copied_ent)
+                        continue
+                    copied_ent['token_string'] = all_up_to_delimiter
+                    copied_ent['token_length'] = len(all_up_to_delimiter)
+
+                new_tokens.append(copied_ent)
+
+    return new_tokens
+
+def split_labeled_tag(entity_list: list, delimiters: str): 
+    # splits entity with token_string 'token_str' in entity_list into two entities based on delimiters.
+    new_tokens = []
+
+    for ent in entity_list:
+        copied_ent = copy.deepcopy(ent)
+
+        matching_delimiters = [delimiter for delimiter in delimiters if delimiter in copied_ent['token_string']]
+        if not any(matching_delimiters) :
+            new_tokens.append(copied_ent)
+            continue
+        else:
+            if len(matching_delimiters)>1:
+                continue
+            delimiter = matching_delimiters[0]
+            txt_tuple = copied_ent['token_string'].split(delimiter)
+            first = txt_tuple[0]
+            second = txt_tuple[1]
+            # first slice of original tag
+            new_tokens.append({
+                "token_string": first,
+                "first_character_index": copied_ent['first_character_index'],
+                "token_length": len(first),
+                "pos": copied_ent['pos'],
+            })
+            ld = len(delimiter)
+            # second slice of original tag
+            new_tokens.append({
+                "token_string": second,
+                "first_character_index": copied_ent['first_character_index'] + len(first) + ld,
+                "token_length": len(second),
+                "pos": copied_ent['pos'],
+            })
+
+    return new_tokens
 
 # --- Example Usage ---
 if __name__ == "__main__":
@@ -230,7 +321,7 @@ if __name__ == "__main__":
         if verbose:
             print(text_sample)
 
-    output = analyze_tokens(text_sample, verbose=False)
+    output = analyze_tokens(text_sample, verbose=verbose)
     
     sorted_output = sorted(output, key=lambda x: x["first_character_index"])
 
@@ -238,6 +329,13 @@ if __name__ == "__main__":
     # word or punctuation mark.)
     clean_sorted_output = decontiguize_entities(text_sample, sorted_output, verbose)
     
+    # omit nuissance words from entity contents
+    omit_strings = [
+        "who", 
+        "whose", 
+        "whom",
+    ]
+    clean_sorted_output = omit_nuissance(clean_sorted_output, omit_strings)
 
     for ent in clean_sorted_output:
         try:
@@ -247,6 +345,16 @@ if __name__ == "__main__":
         if len(indices) > 1:
             # Find untagged instances of tagged entities in text and tag them
             tag_all_instances(text_sample, clean_sorted_output, indices)
+
+    clean_sorted_output = split_labeled_tag(
+        entity_list=clean_sorted_output, 
+        delimiters=[',', ' and ']
+    )
+
+    clean_sorted_output = remove_characters(
+        entity_list=clean_sorted_output, 
+        removal_characters=['[', ']', '(', ')', '.']
+    )
 
     text_list = []
     for out in clean_sorted_output:
@@ -258,5 +366,5 @@ if __name__ == "__main__":
         'ranges': text_list,
     }
 
-    # pdb.set_trace()
+    print(len(clean_sorted_output))
     display_text_annotations(payload)
